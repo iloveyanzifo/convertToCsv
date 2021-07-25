@@ -114,12 +114,18 @@ def EOS(path, deviceName):
 
 def getBlockId(blockId):
     result = blockId
-    if blockId.__eq__('8411') | blockId.__eq__('8412') | blockId.__eq__('8413') | blockId.__eq__('8414'):
-        result = 'temperature Tj'
+    if blockId.__eq__('8411'):
+        result = 'ResultTX_8411_Temperature_Tj'
+    if blockId.__eq__('8412'):
+        result = 'ResultTX_8412_Temperature_Tj'
+    if blockId.__eq__('8413'):
+        result = 'ResultTX_8413_Temperature_Tj'
+    if blockId.__eq__('8414'):
+        result = 'ResultTX_8414_Temperature_Tj'
     if blockId == '8015':
-        result = 'temperature Tj'
+        result = 'ResultStatus_Error_Code'
     if blockId == '2016':
-        result = 'voltage and current'
+        result = 'Result_Voltage_Current'
     if blockId == '1010100':
         result = 'BinResult'
     if blockId == '1111111':
